@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main {
+    public final int max=4;
+    public int[] arr = new int[max];
+    public int tos=-1;
+   
+    public void push (int data){
+        if (tos==max-1){
+            System.out.println("overflow");
+            return; }
+        tos++;
+        arr[tos]=data;
+         System.out.println("Push="+data);
+    }
+   
+    public void pop(){
+        if (tos==-1){
+            System.out.println("underflow");
+            return;}
+   
+        int popd=arr[tos];
+        tos--;
+        System.out.println("Pop="+popd);
+            return;
+    }
+    public static void main(String[] args) {
+        Main stack=new Main();
+        stack.push(10);
+        stack.push(20);
+        stack.push(10);
+        stack.push(10);
+        stack.push(50);
+        stack.push(100);
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+
+    }
+}
